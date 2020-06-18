@@ -1,0 +1,18 @@
+.NavItem {
+  margin: 0 .5rem;
+
+  a {
+    padding: 1rem;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      opacity: .75;
+    }
+
+    @media screen and (max-width: 991px) {
+      padding: 1rem .5rem;
+    }
+  }
+}

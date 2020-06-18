@@ -1,0 +1,11 @@
+.Bank {
+  margin: 0 2rem;
+
+  img {
+    max-width: 10rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 1.5rem 1rem;
+  }
+}

@@ -1,0 +1,27 @@
+.Success {
+  background-color: transparent;
+  background-image: url('../../../../assets/images/bg/right-top-gradient.svg'),
+                    url('../../../../assets/images/bg/success-bg.svg');
+  background-position: center, center;
+  background-size: cover;
+  background-repeat: no;
+  padding: 6rem 0;
+  color: #fff;
+  text-align: center;
+
+  img {
+    max-width: 12rem;
+  }
+
+  small {
+    font-size: .8rem;
+  }
+}
+
+.Badges {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,45 @@
+@import "../../../assets/css/variables.scss";
+
+.Form {
+  width: 100%;
+  max-width: 30rem;
+  background-color: #fff;
+  border-radius: $border-radius;
+  padding: 1.5rem;
+  margin-top: 4rem;
+
+  button[type="submit"] {
+    width: 100%;
+    background-color: $main-yellow;
+    color: $light-green;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+
+    &:hover, &:active, &:focus {
+      color: $main-yellow;
+      background-color: transparent;
+      border-color: $main-yellow;
+    }
+  }
+
+  small {
+    margin-top: 1rem;
+    font-size: .7rem;
+    line-height: 1.7;
+    display: block;
+
+    a {
+      color: $light-green;
+    }
+  }
+
+  @media screen and (min-width: 991px) {
+    width: 50%;
+
+    button[type="submit"] {
+      font-size: 1rem;
+    }
+  }
+}

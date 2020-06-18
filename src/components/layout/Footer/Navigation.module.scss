@@ -1,0 +1,36 @@
+.Navigation {
+  width: 15%;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: .5rem;
+
+    li {
+      margin: 0;
+      padding: .5rem 0;
+
+      a {
+        padding: 0;
+        display: inline-block;
+        font-size: .9rem;
+
+        &:before {
+          display: none;
+        }
+
+        @media screen and (max-width: 568px) {
+          font-size: .8rem;
+        }
+      }
+
+      @media screen and (max-width: 568px) {
+        padding: .25rem 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    width: 20%;
+  }
+}

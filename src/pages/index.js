@@ -1,21 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Exchange from "../components/layout/Home/Exchange";
+import Banks from "../components/layout/Banks";
+import Steps from "../components/layout/Steps";
+import Success from '../components/layout/Home/Success';
+import Reviews from '../components/layout/Reviews';
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+  <Layout location="/">
+    <SEO title="Cambia soles y dólares de forma rápida y segura" />
+
+    <Exchange />
+    <Banks />
+    <article className="main-article">
+      <div className="container">
+        <h2>¿Cómo Funciona?</h2>
+        <p>Hacer tus cambios en Instakash es rápido y sencillo. Nuestra plataforma te guia en cada proceso desde el inicio hasta finalizar tu operación. <br /> <b>Solo sigue los pasos y ¡listo!</b>, ahorrarás cambiando dólares.</p>
+      </div>
+      <Steps />
+    </article>
+
+    <Success />
+
+    <article className="main-article">
+      <div className="container">
+        <h2>Que opinan nuestros clientes</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci iste ipsum cum voluptatem, <br /> modi unde! Nobis quas voluptas voluptate sit unde illo nisi omnis totam nam, labore eligendi fugit? Unde!</p>
+        <Reviews />
+      </div>
+    </article>
   </Layout>
 )
 

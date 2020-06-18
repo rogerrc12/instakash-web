@@ -1,0 +1,43 @@
+@import "../../../assets/css/variables.scss";
+
+.Group {
+  border: 2px solid rgba(43, 52, 49, .15);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: $border-radius;
+}
+
+.Input {
+  width: 100%;
+  border: none;
+  font-size: .9rem;
+  color: #707070;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.Error {
+  border-color: red;
+}
+
+.ErrorMessage {
+  display: block;
+  color: red;
+  padding: .5rem 1rem 1rem .5rem;
+  margin-top: -.5rem;
+  font-size: .8rem;
+}
+
+.Label {
+  display: block;
+  color: $light-green;
+  font-size: .75rem;
+  margin-bottom: .3rem;
+
+  &.Error {
+    border-color: transparent;
+    color: red;
+  }
+}

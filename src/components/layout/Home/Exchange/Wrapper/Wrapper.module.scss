@@ -1,0 +1,79 @@
+.Wrapper {
+  position: relative;
+  margin: 3rem 0 2rem;
+  text-align: center;
+  order: 2;
+  z-index: 1;
+
+  @media screen and (min-width: 767px) {
+    margin-top: 2rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    order: 1;
+  }
+}
+
+.Background {
+  position: absolute;
+  height: 30rem;
+  width: 30rem;
+  top: -2rem;
+  left: -6rem;
+  background-color: #F0F5F4;
+  border-radius: 50%;
+  z-index: -1;
+
+  @media screen and (min-width: 767px) {
+    top: 0;
+    left: -3.8rem;
+    height: 35rem;
+    width: 35rem;
+  }
+
+  @media screen and (min-width: 1240px) {
+    top: -3rem;
+    left: -6rem;
+    height: 45rem;
+    width: 45rem;
+  }
+}
+
+.Slider {
+  margin-bottom: 1rem;
+  z-index: 1;
+  
+
+  img {
+    max-width: 35rem;
+  }
+
+  @media screen and (min-width: 767px) {
+    margin-top: 2rem;
+
+    img {
+      max-width: 27rem;
+    }
+  }
+
+  @media screen and (min-width: 1240px) {
+    margin-top: 2rem;
+
+    img {
+      max-width: 34rem;
+    }
+  }
+}
+
+.Badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column; 
+
+  @media screen and (min-width: 767px) {
+    margin-top: 2rem;
+    flex-flow: row;
+    justify-content: space-around;
+  }
+}

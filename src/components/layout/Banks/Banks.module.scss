@@ -1,0 +1,35 @@
+@import "../../../assets/css/variables.scss";
+
+.Banks {
+  box-shadow: 40px 20px 30px #EFF4F3;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  border-radius: $border-radius;
+  width: 90%;
+  max-width: 1140px;
+
+  h2 {
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: .5rem;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.BanksWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    flex-flow: column;
+  }
+}

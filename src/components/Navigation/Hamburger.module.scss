@@ -1,0 +1,42 @@
+.Hamburger {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+
+  span {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    border-radius: 5px;
+    position: absolute;
+    top: 1rem;
+
+    &:before, &:after {
+      content: "";
+      background-color: #fff;
+      width: 100%;
+      height: 4px;
+      display: block;
+      position: absolute;
+      border-radius: 5px;
+      right: 0;
+    }
+
+    &:before {
+      width: 80%;
+      top: -.55rem;
+    }
+
+    &:after {
+      width: 60%;
+      top: .57rem;
+    }
+  }
+}

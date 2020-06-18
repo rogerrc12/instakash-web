@@ -1,0 +1,41 @@
+@import "../../../assets/css/variables.scss";
+
+.Badge {
+  padding: .2rem 1rem;
+  border-radius: $border-radius;
+  background-color: $light-green;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 13rem;
+  height: 4rem;
+  margin: .3rem;
+  text-align: left;
+
+  p {
+    color: #fff;
+    font-size: .85rem;
+    margin-left: 1.2rem;
+    line-height: 1.1;
+    
+    span {
+      font-weight: 500;
+      margin-top: .3rem;
+      display: inline-block;
+    }
+  }
+
+  svg {
+    color: $main-yellow;
+    font-size: 2rem;
+  }
+}
+
+.Number {
+  font-size: 1.5rem;
+}
+
+.Transparent {
+  background-color: rgba(255, 255, 255, .1);
+}

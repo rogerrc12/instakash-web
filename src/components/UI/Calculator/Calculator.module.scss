@@ -1,0 +1,109 @@
+@import "../../../assets/css/variables.scss";
+
+.Calculator {
+  width: 100%;
+  max-width: 35rem;
+  order: 1;
+
+  h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .Prices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 767px) {
+    margin: 0 auto;
+    width: auto;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1240px) {
+    margin: 0 5rem;
+    max-width: 50rem;
+
+    h1 {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+.CalculatorForm {
+  position: relative;
+}
+
+.CalculatorInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+
+  .Info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+
+    svg {
+      padding: .5rem 1rem .5rem 0;
+      font-size: 1.5rem;
+      border-right: 2px solid #fff;
+    }
+
+    p {
+      padding-left: 1rem;
+      font-size: .7rem;
+    }
+
+  }
+
+  .Action {
+    margin-left: auto;
+    background-color: $main-yellow;
+    color: $main-green;
+    text-decoration: none;
+    box-shadow: 0 20px 40px rgba(47, 112, 90, .15);
+    cursor: pointer;
+    transition: 250ms ease-out;
+
+    &:hover, &:focus, &:active {
+      color: $main-yellow;
+      background-color: transparent;
+      border-color: $main-yellow
+    }
+
+    &:disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+
+  @media screen and (min-width: 1240px) {
+    .Info p {
+      font-size: .95rem;
+    }
+  }
+}
+
+.ErrorMessage {
+  color: $main-yellow;
+  display: block;
+  padding: .5rem .5rem 0;
+  font-size: .9rem;
+  text-align: left;
+  font-weight: 600;
+}

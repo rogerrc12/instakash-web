@@ -1,0 +1,16 @@
+.Newsletter {
+  width: 38%;
+
+  p {
+    text-align: left;
+    line-height: 1.5;
+
+    @media screen and (max-width: 768px) {
+      font-size: .8rem;
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    width: 80%;
+  }
+}

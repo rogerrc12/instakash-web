@@ -1,0 +1,59 @@
+.Arrows {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  justify-content: space-between;
+  top: 25%;
+  left: 8.4rem;
+  -webkit-animation: rotate-center 3s linear 3.5s infinite forwards;
+	        animation: rotate-center 3s linear 3.5s infinite forwards;
+
+  img {
+    display: inline-block;
+    margin: .3rem 0;
+    max-width: 2rem !important;
+  }
+
+  @media screen and (min-width: 767px) {
+    top: 40%;
+    left: 11rem;
+
+    img {
+      max-width: 2.5rem !important;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    left: 10.8rem;
+
+    
+    img {
+      max-width: 2.8rem !important;
+    }
+  }
+
+  @media screen and (min-width: 1240px) {
+    left: 13.4rem;
+  }
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}

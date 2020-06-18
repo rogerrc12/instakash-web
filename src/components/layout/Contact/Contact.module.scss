@@ -1,0 +1,15 @@
+.Contact {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: .9rem
+  }
+
+  @media screen and (min-width: 991px) {
+    flex-flow: row;
+    align-items: flex-start;
+  }
+}

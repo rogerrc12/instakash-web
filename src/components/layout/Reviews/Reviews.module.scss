@@ -1,0 +1,26 @@
+@import "../../../assets/css/variables.scss";
+
+.Reviews {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.Arrow {
+  display: inline-block;
+  padding: 1rem;
+  color: $light-green;
+  position: absolute;
+  bottom: -1.5rem;
+  right: 0;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 250ms ease-out;
+
+  &:hover, &:active, &:focus {
+    opacity: .7;
+  }
+
+  &:first-child {
+    right: 2.8rem;
+  }
+}

@@ -1,0 +1,16 @@
+.Header {
+  background: url(../../../assets/images/bg/header-bg.svg) top center/cover no-repeat;
+  width: 100%;
+}
+
+.Transparent {
+  background: transparent;
+  position: absolute;
+}
+
+.HeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

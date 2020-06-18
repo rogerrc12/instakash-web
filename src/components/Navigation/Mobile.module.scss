@@ -1,0 +1,86 @@
+@import "../../assets/css/variables.scss";
+
+.Mobile {
+  max-width: 20rem;
+  width: 100%;
+  height: 100%;
+  max-height: 17rem;
+  position: fixed;
+  top: 17px;
+  right: 17px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: rgba(4, 157, 124, .25);
+  z-index: 100;
+  transition: 350ms ease-out;
+  transform: scale(0);
+  transform-origin: top right;
+  opacity: 0;
+
+  @media screen and (min-width: 769px) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    height: 100%;
+    padding: 0;
+    margin-top: 3rem;
+
+    li {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: #000;
+    padding: .7rem;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.Opened {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.SignIn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem !important;
+
+  a {
+    background-color: $main-yellow;
+    color: $light-green;
+    display: inline-block;
+    margin: 0 auto;
+    font-weight: 700;
+  }
+}
+
+.CloseBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #B8BCBA;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 250ms ease-out;
+
+  &:hover {
+    opacity: .75;
+  }
+}
+
+.ActiveLink {
+  color: $light-green !important;
+  font-weight: bold;
+}

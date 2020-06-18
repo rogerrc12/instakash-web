@@ -1,0 +1,21 @@
+.SocialMedia {
+  width: 20%;
+  padding-left: .5rem;
+
+  svg {
+    margin: .2rem;
+    margin-right: 2rem;
+    color: #fff;
+    font-size: 1.7rem; 
+
+    @media screen and (max-width: 568px) {
+      font-size: 1.1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 1140px) {
+    width: 28%;
+    padding: 0;
+  }
+}

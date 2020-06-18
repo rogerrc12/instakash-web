@@ -1,0 +1,68 @@
+@import "../../../assets/css/variables.scss";
+
+.Review {
+  width: 100%;
+  max-width: 18rem;
+  min-height: 11.5rem;
+  padding: 1.5rem;
+  box-shadow: 20px 20px 30px rgba(239, 244, 243, 1);
+  background-color: #fff;
+  border-radius: $border-radius;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+
+  p {
+    font-size: .75rem;
+  }
+
+  @media screen and (min-width: 568px) {
+    max-width: 33rem;
+    padding: 1.2rem 2rem;
+
+    p {
+      font-size: .85rem;
+    }
+  }
+}
+
+.User {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+
+  img {
+    max-width: 5rem;
+    margin-right: .5rem;
+  }
+
+  @media screen and (min-width: 568px) {
+    img {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.Name {
+  color: $light-green;
+  display: block;
+  margin-bottom: -5px;
+}
+
+.Stars {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.2rem;
+  font-size: .7rem;
+  color: $light-green;
+
+  svg {
+    margin: 0 .15rem;
+  }
+
+  @media screen and (min-width: 568px) {
+    font-size: .85rem;
+  }
+}

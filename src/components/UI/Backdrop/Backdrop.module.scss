@@ -1,0 +1,16 @@
+.Backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .45);
+  z-index: 99;
+  cursor: pointer;
+  opacity: 0;
+  transition: 250ms ease-out;
+}
+
+.Show {
+  opacity: 1;
+}

@@ -1,0 +1,40 @@
+@import "../../../../assets/css/variables.scss";
+
+.Exchange {
+  background-color: transparent;
+  padding-top: 4rem;
+  height: 100%;
+  background-image: url('../../../../assets/images/bg/right-top-gradient.svg'), 
+                    url('../../../../assets/images/bg/lower-gradient.svg'), 
+                    url('../../../../assets/images/bg/lower-color.svg');
+  background-size: cover;
+  background-position: 0 calc(100% - 9rem), 0 calc(100% - 2rem), 0 100%;
+  background-repeat: no-repeat, no-repeat;
+  overflow: hidden;
+
+  @media screen and (min-width: 767px) {
+    background-position: 0 calc(100% - 7rem), 0 calc(100% - 1rem), 0 100%;
+  }
+
+  @media screen and (min-width: 1023px) {
+    background-position: 0 calc(100% - 2rem), 0 calc(100% - 1rem), 0 100%;
+  }
+}
+
+.ExchangeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column;
+
+  @media screen and (min-width: 1023px) {
+    flex-flow: row;
+    height: 82vh;
+  }
+
+  @media screen and (min-width: 1240px) {
+    padding-top: 4rem;
+    align-items: flex-start;
+  }
+}

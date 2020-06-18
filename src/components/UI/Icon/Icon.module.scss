@@ -1,0 +1,12 @@
+.Icon {
+  background-color: rgba(1, 183, 152, .2);
+  padding: 1.2rem;
+  border-radius: 50%;
+  position: relative;
+  color: #000;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+  }
+}

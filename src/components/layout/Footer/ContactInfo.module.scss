@@ -1,0 +1,57 @@
+.ContactInfo {
+  width: 20%;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0 .5rem;
+ 
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: baseline;
+      padding: .5rem 0;
+
+      svg {
+        position: relative;
+        top: 3px;
+        margin-right: .5rem;
+
+        @media screen and (max-width: 568px) {
+          font-size: .65rem;
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1140px) {
+    width: 42%;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: .75rem;
+  }
+}
+
+.Horario {
+  max-width: 14rem;
+
+  h4 {
+    font-size: .9rem !important;
+    color: #fff !important;
+    margin: 0 !important;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 0;
+  }
+}

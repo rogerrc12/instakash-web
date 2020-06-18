@@ -1,0 +1,47 @@
+@import "../../assets/css/variables.scss";
+
+.Navigation {
+  display: flex;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.LoginNavigation {
+  margin-left: 2rem;
+
+  a {
+    color: $main-green;
+    text-decoration: none;
+    margin: 0 .6rem;
+
+    &:first-child {
+      background-color: $light-gray;
+
+      &:hover {
+        color: $light-gray;
+        background-color: transparent;
+        border-color: $light-gray;
+      }
+    }
+
+    &:last-child {
+      background-color: $main-yellow;
+
+      &:hover {
+        color: $main-yellow;
+        background-color: transparent;
+        border-color: $main-yellow;
+      }
+    }
+  }
+}
