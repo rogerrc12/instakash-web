@@ -10,7 +10,7 @@ import classes from './Steps.module.scss';
 
 const steps = [
   {img: Step1, title: "Crea tu Usuario", number: "1"},
-  {img: Step2, title: "Registra tu cuentaa recibir", number: "2"},
+  {img: Step2, title: "Registra tu cuenta para recibir", number: "2"},
   {img: Step3, title: "Transfiere a Instakash", number: "3"},
   {img: Step4, title: "Recibe tu Cambio", number: "4"},
 ];

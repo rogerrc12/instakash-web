@@ -2,7 +2,8 @@ import React from 'react';
 import { useFetch } from '../../../hooks';
 
 const Schedule = () => {
-  const { response: schedule }  = useFetch('https://cors-anywhere.herokuapp.com/https://app.instakash.net/home/getSchedule', { headers: { 'Content-Type':'application/json' } }, 'post');
+  const { response: schedule }  = useFetch(`${process.env.INSTAKASH_API_URL}/home/getSchedule`, 
+    { headers: { 'Content-Type':'application/json' } }, 'post');
 
   let scheduleTime;
   if (!schedule) {

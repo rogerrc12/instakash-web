@@ -16,7 +16,7 @@ const Nosotros = () => (
 
       <article className="main-article">
         <h2>¿Cómo funciona?</h2>
-        <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industriesLorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries</p>
+        <p>Hacer tus cambios en Instakash es rápido y sencillo. Nuestra plataforma te guia en cada proceso desde el inicio hasta finalizar tu operación. <br /> <b>Solo sigue los pasos y ¡listo!</b>, ahorrarás cambiando dólares.</p>
         <Steps />
         <Banks />
       </article>

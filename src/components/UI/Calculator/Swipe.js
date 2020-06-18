@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import classes from './Swipe.module.scss';
 
 const Swipe = (props) => {
+  useEffect(() => {
+    if (props.condition === "buying") {
+      props.setReceiving((props.sending / props.selling).toFixed(2));
+    } else {
+      props.setReceiving((props.sending * props.buying).toFixed(2));
+    }
+  });
+
   const classList = [classes.Swipe];
 
   if (props.condition === "selling") {

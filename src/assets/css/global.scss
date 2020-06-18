@@ -98,6 +98,7 @@ textarea {
   font-size: .9rem;
   min-width: 5.5rem;
   text-align: center;
+  transition: 250ms ease-out;
 }
 
 .container {
@@ -184,5 +185,36 @@ textarea {
   span {
     color: $light-green;
     font-weight: 600;
+  }
+}
+
+.not-found {
+  width: 100%;
+  min-height: 70vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 15rem;
+  }
+  
+  h1 {
+    color: $main-green;
+    text-align: center;
+  }
+
+  a.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: $main-yellow;
+    color: $second-green;
+    text-decoration: none;
+
+    &:hover {
+      border-color: $main-yellow;
+      background-color: transparent;
+    }
   }
 }

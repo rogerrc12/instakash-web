@@ -19,13 +19,15 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            keywords
+            siteUrl
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -40,6 +42,10 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: 'keywords',
+          constent: site.siteMetadata.keywords
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -50,6 +56,18 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `website`,
+        },
+        {
+          property: `og:locale`,
+          content: `es_PE`,
+        },
+        {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
         },
         {
           name: `twitter:card`,
@@ -68,7 +86,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={site.siteMetadata.siteUrl} />
+    </Helmet>
   )
 }
 

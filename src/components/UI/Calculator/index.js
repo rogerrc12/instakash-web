@@ -16,7 +16,7 @@ import "ldbutton/dist/ldbtn.min.css";
 
 const validationSchema = Yup.object({
   sending: Yup.number().required('Debes colocar un monto a enviar antes de continuar.').min(30, 'El monto minimo para enviar es de 30 dólares o soles.'),
-  receiving: Yup.number().required('Debes colocar un monto para enviar antes de continuar.').min(20, 'El monto minimo para recibir es de 10 dólares o soles.')
+  receiving: Yup.number().required('Debes colocar un monto para enviar antes de continuar.')
 })
 
 const Calculator = () => {
@@ -25,10 +25,11 @@ const Calculator = () => {
   const [receiving, setReceiving] = useState(1000 * selling);
   const calculatorRef = useRef();
 
-  const { response: limits } = useFetch('https://cors-anywhere.herokuapp.com/https://app.instakash.net/home/getLimits', 
+  const { response: limits } = useFetch(`${process.env.INSTAKASH_API_URL}/home/getLimits`, 
     { headers: { 'Content-Type':'application/json' } }, 'post');
 
-  const { response: prices } = useFetch('https://cors-anywhere.herokuapp.com/https://app.instakash.net/home/getCurrencies', { headers: { 'Content-Type':'application/json' } }, 'post');
+  const { response: prices } = useFetch(`${process.env.INSTAKASH_API_URL}/home/getCurrencies`, 
+    { headers: { 'Content-Type':'application/json' } }, 'post');
 
   let pricesEl,
       buyingTotal,
@@ -38,14 +39,8 @@ const Calculator = () => {
     if (prices) {
       setBuying(buyingTotal);
       setSelling(sellingTotal);
-
-      if (calculatorRef.current.values.condition === "buying") {
-        setReceiving((calculatorRef.current.values.sending / selling).toFixed(2));
-      } else {
-        setReceiving((calculatorRef.current.values.sending * buying).toFixed(2));
-      }
     };
-  }, [prices, buyingTotal, sellingTotal, selling, buying]);
+  }, [prices, buyingTotal, sellingTotal]);
 
   const changeConditionHandler = (condition, setFieldValue) => {
     setFieldValue("condition", condition === "buying" ? "selling" : "buying");
@@ -86,6 +81,7 @@ const Calculator = () => {
       
       <Formik innerRef={calculatorRef} initialValues={{ sending: 1000, receiving: 0, condition: "selling" }} validationSchema={validationSchema}
         onSubmit={async (values, { setSubmitting }) => {
+          if (values.receiving === 0) return null;
 
           setSubmitting(true);
           try {
@@ -101,7 +97,13 @@ const Calculator = () => {
             <Input label="compra" condition={values.condition} error={errors.receiving}
               receiving={receiving} selected={() => changeConditionHandler(values.condition, setFieldValue)} changed={changeAmountHandler} 
             />
-            <Swipe clicked={() => changeConditionHandler(values.condition, setFieldValue)} condition={values.condition} />
+            <Swipe 
+              clicked={() => changeConditionHandler(values.condition, setFieldValue)} 
+              setReceiving={setReceiving} 
+              condition={values.condition} sending={values.sending}
+              selling={selling} buying={buying}
+            />
+
             {errors.sending || errors.receiving ? <span className={classes.ErrorMessage}>* {errors.sending || errors.receiving}</span> : null}
 
             <div className={classes.CalculatorInfo}>

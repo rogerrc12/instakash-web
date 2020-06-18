@@ -10,7 +10,7 @@ import Review from './Review';
 import classes from './Reviews.module.scss';
 
 const Reviews = () => {
-  const { response: userReviews } = useFetch('https://cors-anywhere.herokuapp.com/https://app.instakash.net/home/comments', 
+  const { response: userReviews } = useFetch(`${process.env.INSTAKASH_API_URL}/home/comments`, 
     { headers: { 'Content-Type':'application/json' } }, "post");
 
   const settings = {

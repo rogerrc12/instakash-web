@@ -8,7 +8,7 @@ const Information = () => {
   return (
     <div className={classes.InfoContact}>
       <h1 className="contact-title">Gracias por tu interés en <br /> <span>Instakash</span></h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia ipsam cumque perspiciatis architecto id sapiente, suscipit nulla dolorum repellat praesentium magnam ducimus aperiam rem reprehenderit ex unde, repudiandae mollitia consectetur?</p>
+      <p>Estamos siempre innovando, buscando siempre las mejores opciones financieras para ti. Siguenos de cerca y mantente al dia con nuestros temas de educación financiera y nuestros servicios. Para cualquier duda o consulta contáctanos. </p>
       <div className={classes.ContentWrapper}>
 
         <div className={classes.Information}>
