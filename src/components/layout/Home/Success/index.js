@@ -6,7 +6,7 @@ import Logo from '../../../../assets/images/logo-blanco.svg';
 import classes from './Success.module.scss';
 
 const Success = () => {
-  const { response: counters } = useFetch(`${process.env.INSTAKASH_API_URL}/home/counters`, 
+  const { response: counters } = useFetch(`https://app.instakash.net/home/counters`, 
     { headers: { 'Content=Type':'application/json' } }, 'post');
 
   return (

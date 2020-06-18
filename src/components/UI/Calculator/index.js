@@ -25,10 +25,10 @@ const Calculator = () => {
   const [receiving, setReceiving] = useState(1000 * selling);
   const calculatorRef = useRef();
 
-  const { response: limits } = useFetch(`${process.env.INSTAKASH_API_URL}/home/getLimits`, 
+  const { response: limits } = useFetch(`https://app.instakash.net/home/getLimits`, 
     { headers: { 'Content-Type':'application/json' } }, 'post');
 
-  const { response: prices } = useFetch(`${process.env.INSTAKASH_API_URL}/home/getCurrencies`, 
+  const { response: prices } = useFetch(`https://app.instakash.net/home/getCurrencies`, 
     { headers: { 'Content-Type':'application/json' } }, 'post');
 
   let pricesEl,

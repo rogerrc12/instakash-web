@@ -2,7 +2,7 @@ import React from 'react';
 import { useFetch } from '../../../hooks';
 
 const Schedule = () => {
-  const { response: schedule }  = useFetch(`${process.env.INSTAKASH_API_URL}/home/getSchedule`, 
+  const { response: schedule }  = useFetch(`https://app.instakash.net/home/getSchedule`, 
     { headers: { 'Content-Type':'application/json' } }, 'post');
 
   let scheduleTime;

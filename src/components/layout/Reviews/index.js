@@ -10,7 +10,7 @@ import Review from './Review';
 import classes from './Reviews.module.scss';
 
 const Reviews = () => {
-  const { response: userReviews } = useFetch(`${process.env.INSTAKASH_API_URL}/home/comments`, 
+  const { response: userReviews } = useFetch(`https://app.instakash.net/home/comments`, 
     { headers: { 'Content-Type':'application/json' } }, "post");
 
   const settings = {
