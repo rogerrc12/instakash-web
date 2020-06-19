@@ -3,19 +3,23 @@
   flex-flow: column;
   position: absolute;
   justify-content: space-between;
-  top: 25%;
-  left: 8.4rem;
+  top: 29%;
+  left: 8.5rem;
   -webkit-animation: rotate-center 3s linear 3.5s infinite forwards;
-	        animation: rotate-center 3s linear 3.5s infinite forwards;
+          animation: rotate-center 3s linear 3.5s infinite forwards;
+          
+  @supports (-webkit-touch-callout: none) {
+    top: 49%;
+  }
 
   img {
     display: inline-block;
     margin: .3rem 0;
-    max-width: 2rem !important;
+    max-width: 1.8rem !important;
   }
 
   @media screen and (min-width: 767px) {
-    top: 40%;
+    top: 42%;
     left: 11rem;
 
     img {
