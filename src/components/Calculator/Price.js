@@ -12,14 +12,7 @@ const Price = ({ title, price, divider }) => {
 
   return (
     <div className={classList.join(' ')}>
-      <p className={classes.Title}>
-        {title}
-        {title === 'Compra' ?
-          <span>$ &gt; S/.</span>
-          :
-          <span>S/. &gt; $</span>
-        }
-      </p>
+      <p className={classes.Title}>{title}</p>
       <p>
         S/. <span className={classes.Price}>{price.toFixed(3)}</span>
       </p>

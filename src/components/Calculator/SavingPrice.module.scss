@@ -1,0 +1,10 @@
+.SavingPrice {
+  color: #fff;
+  font-size: .9rem;
+  text-align: center;
+  margin-bottom: .2rem;
+
+  @media screen and (min-width: 767px) {
+    font-size: 1rem;
+  }
+}

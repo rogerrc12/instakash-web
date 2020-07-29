@@ -3,13 +3,13 @@
 .Card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-flow: column;
   background-color: rgba($light-green, .2);
   margin: 1rem;
   padding: 1.5rem 1rem;
   border-radius: $border-radius;
-  width: 10rem;
+  width: 11rem;
   height: 13rem;
 
   @media screen and (max-width: 768px) {
@@ -18,7 +18,7 @@
   }
 
   img {
-    max-width: 8rem;
+    max-width: 7rem;
   }
 
   .Number {
@@ -34,7 +34,7 @@
 
   p {
     font-weight: 700;
-    font-size: .85rem;
+    font-size: 1rem;
     line-height: 1.2;
   }
 }

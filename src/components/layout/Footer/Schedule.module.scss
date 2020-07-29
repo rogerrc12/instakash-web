@@ -1,0 +1,23 @@
+.Horario {
+  width: 50%;
+  font-size: .75rem;
+  line-height: 1.5;
+  color: #fff;
+
+  p {
+    max-width: 14rem;
+  }
+
+  svg {
+    font-size: .65rem;
+    position: relative;
+    top: 3px;
+    margin-right: .5rem;
+  }
+
+  @media screen and (min-width: 767px) {
+    width: 20%;
+    font-size: 1rem;
+  }
+   
+}

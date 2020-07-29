@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { sendUserToLogin } from '../../../helpers/functions';
-import { useFetch } from '../../../hooks';
+import { sendUserToLogin } from '../../helpers/functions';
+import { useFetch } from '../../hooks';
 import Price from './Price';
 import * as Yup from 'yup';
 import { Formik, Form } from 'formik';
 import Input from './Input';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Spinner from '../../UI/Spinner';
+import Limits from './Limits';
+import Spinner from '../UI/Spinner';
 import Swipe from './Swipe';
+import SavingPrice from './SavingPrice';
 
 import classes from './Calculator.module.scss';
 import "@loadingio/loading.css/dist/loading.css";
@@ -24,9 +25,6 @@ const Calculator = () => {
   const [selling, setSelling] = useState(0.000);
   const [receiving, setReceiving] = useState(1000 * selling);
   const calculatorRef = useRef();
-
-  const { response: limits } = useFetch(`https://app.instakash.net/home/getLimits`, 
-    { headers: { 'Content-Type':'application/json' } }, 'post');
 
   const { response: prices } = useFetch(`https://app.instakash.net/home/getCurrencies`, 
     { headers: { 'Content-Type':'application/json' } }, 'post');
@@ -105,14 +103,9 @@ const Calculator = () => {
             />
 
             {errors.sending || errors.receiving ? <span className={classes.ErrorMessage}>* {errors.sending || errors.receiving}</span> : null}
-
+            <SavingPrice condition={values.condition} selling={selling} buying={buying} sending={values.sending} receiving={receiving} />
             <div className={classes.CalculatorInfo}>
-              <div className={classes.Info}>
-                <FontAwesomeIcon icon={['far', 'question-circle']} />
-                <p>Monto mayor a <br />
-                  {!limits ? '$ 10,000 o S. / 30,000' : `${limits[0].Symbol} ${limits[0].Limit} o ${limits[1].Symbol} ${limits[1].Limit}`} ?
-                </p>
-              </div>
+              <Limits />
               <button type="submit" 
                 className={`btn ${classes.Action} ld-ext-right ${isSubmitting ? 'running' : ''}`} 
                 disabled={!isValid || isSubmitting} 

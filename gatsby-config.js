@@ -1,14 +1,15 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
     title: `Instakash`,
     description: `Nos encargamos en ofrecerte el mejor servicio y la mejor asesoria para tus actividades financieras.`,
-    keywords: 'dolares, soles, dolar, cambio dolares, divisas, finanzas, asesoria',
+    keywords:
+      "dolares, soles, dolar, cambio dolares, divisas, finanzas, asesoria",
     author: `@rogerrc12`,
-    siteUrl: 'https://instakash.net'
+    siteUrl: "https://instakash.net",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,15 +25,21 @@ module.exports = {
       options: {
         id: process.env.TAG_MANAGER_ID,
         includeInDevelopment: false,
-      }
+      },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        host: 'https://www.instakash.net',
-        sitemap: 'https://www.instakash.net/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        pixelId: `1094021370999697`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.instakash.net",
+        sitemap: "https://www.instakash.net/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
@@ -49,9 +56,9 @@ module.exports = {
         icon: `src/assets/images/icono.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -26,8 +26,8 @@ const IndexPage = () => (
 
     <article className="main-article">
       <div className="container">
-        <h2>Lo que opinan nuestros clientes</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci iste ipsum cum voluptatem, <br /> modi unde! Nobis quas voluptas voluptate sit unde illo nisi omnis totam nam, labore eligendi fugit? Unde!</p>
+        <h2>Lo que opinan nuestros usuarios</h2>
+        <p>Ellos confiaron en nosotros, esto fue lo que nos dijeron.</p>
         <Reviews />
       </div>
     </article>

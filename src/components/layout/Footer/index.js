@@ -3,7 +3,8 @@ import Fade from 'react-reveal/Fade';
 import { Link } from 'gatsby'
 import Logo from '../../UI/Logo';
 import Navigation from './Navigation';
-import ContactInfo from './ContactInfo';
+import Legal from './Legal';
+import Schedule from './Schedule';
 import SocialMedia from './SocialMedia';
 import Newsletter from './Newsletter';
 
@@ -21,12 +22,22 @@ const Footer = ({ siteTitle }) => {
 
         <div className={classes.FooterWrapper}>
           <Navigation />
-          <ContactInfo />
+          <Schedule />
+          <Legal />
           <SocialMedia />
           <Newsletter />
         </div>
       </div>
-      <p className={classes.Copy}>2020 &copy; Todos los derechos reservados. <Link to="/">Instakash</Link></p>
+      <div className={classes.CompanyInfo}>
+        <p className={classes.Copy}>2020 &copy; Todos los derechos reservados. <Link to="/">Instakash</Link></p>
+        <p className={classes.Company}>
+          Instakash S.A.C. RUC 20605285105
+          <br />
+          Registro SBS: 05939-2019
+          <br />
+          Av. Ejército 749, Miraflores
+        </p>
+      </div>
     </footer>
   )
 }

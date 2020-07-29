@@ -17,8 +17,8 @@ const ExchangeSlider = () => {
         </div>
       </Fade>
       <div className={classes.Badges}>
-        <Badge icon={['fas', 'dollar-sign']} animation={1000} small="Transacciones registradas" content="+ 2MIL" number />
-        <Badge icon={['fas', 'award']} animation={1600} small="Verificados por la" content="SBS & AFP - RESOLUCIÓN SBS N° 05939-2019" />
+        <Badge icon="fas fa-dollar-sign" animation={1000} small="Transacciones registradas" content="+ 2MIL" number />
+        <Badge icon="fas fa-award" animation={1600} small="Registrados en la" afp />
       </div>
       <Zoom delay={300}>
         <div className={classes.Background}></div>

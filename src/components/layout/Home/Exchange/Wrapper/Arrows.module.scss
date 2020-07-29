@@ -4,7 +4,7 @@
   position: absolute;
   justify-content: space-between;
   top: 29%;
-  left: 8.5rem;
+  left: 7.75rem;
   -webkit-animation: rotate-center 3s linear 3.5s infinite forwards;
           animation: rotate-center 3s linear 3.5s infinite forwards;
           
@@ -28,7 +28,7 @@
   }
 
   @media screen and (min-width: 1024px) {
-    left: 10.8rem;
+    left: 11.3rem;
 
     
     img {
@@ -36,7 +36,7 @@
     }
   }
 
-  @media screen and (min-width: 1240px) {
+  @media screen and (min-width: 1440px) {
     left: 13.4rem;
   }
 }

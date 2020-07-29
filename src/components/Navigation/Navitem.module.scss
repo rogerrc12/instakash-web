@@ -6,9 +6,11 @@
     color: #fff;
     position: relative;
     text-decoration: none;
+    transition: 250ms ease-out;
 
     &:hover {
-      opacity: .75;
+      color: #fff;
+      opacity: .75 !important;
     }
 
     @media screen and (max-width: 991px) {

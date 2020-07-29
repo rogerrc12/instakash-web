@@ -3,7 +3,7 @@ import { useFetch } from '../../../hooks';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import Review from './Review';
 
@@ -40,7 +40,7 @@ const Reviews = () => {
   )
 }
 
-const PrevArrow = props => <div className={classes.Arrow}> <FontAwesomeIcon onClick={props.onClick} icon={['fas', 'arrow-left']} /> </div>;
-const NextArrow = props => <div className={classes.Arrow}> <FontAwesomeIcon onClick={props.onClick} icon={['fas', 'arrow-right']} /> </div>;
+const PrevArrow = props => <div className={classes.Arrow}> <span onClick={props.onClick} className="fas arrow-left" /> </div>;
+const NextArrow = props => <div className={classes.Arrow}> <span onClick={props.onClick} className="fas arrow-right" /> </div>;
 
 export default Reviews

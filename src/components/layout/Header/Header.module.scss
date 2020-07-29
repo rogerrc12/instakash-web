@@ -1,6 +1,7 @@
 .Header {
   background: url(../../../assets/images/bg/header-bg.svg) top center/cover no-repeat;
   width: 100%;
+  padding: .5rem 0;
 }
 
 .Transparent {
@@ -12,5 +13,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 1023px) {
+  .MobileOnly {
+    display: none;
+  }
 }
 

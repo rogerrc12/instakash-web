@@ -11,7 +11,8 @@ const Navigation = () => {
         <ul>
           <NavItem link="/nosotros">Nosotros</NavItem>
           <NavItem link="/contacto">Contacto</NavItem>
-          <NavItem link="/ayuda">Ayuda</NavItem>
+          <NavItem link="/ayuda">Preguntas frecuentes</NavItem>
+          <a href="mailto:contacto@instakash.net" className={classes.Email}>Atención al cliente</a>
         </ul>
       </nav>
     </div>

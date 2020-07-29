@@ -1,11 +1,11 @@
-@import "../../../assets/css/variables.scss";
+@import "../../assets/css/variables.scss";
 
 .Swipe {
   position: absolute;
-  padding: .35rem;
+  padding: .35rem .45rem;
   border-radius: 50%;
   border: 4.5px solid $light-green;
-  top: 24%;
+  top: 55px;
   right: 41%;
   background-color: $main-yellow;
   transition: 350ms ease-in-out;
@@ -17,8 +17,8 @@
     outline: 0;
   }
 
-  @media screen and (min-width: 1140px) {
-    top: 20%;
+  @media screen and (min-width: 1440px) {
+    top: 53px;
   }
 }
 

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import 'normalize.css'
 import '../../helpers/FontAwesome';
+import Whatsapp from '../UI/Whatsapp/Button';
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -23,6 +24,7 @@ const Layout = ({ children, location }) => {
       <Header siteTitle={data.site.siteMetadata.title} location={location} />
       <main>{children}</main>
       <Footer siteTitle={data.site.siteMetadata.title} />
+      <Whatsapp />
     </div>
   )
 }

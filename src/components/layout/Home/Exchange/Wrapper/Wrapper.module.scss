@@ -20,7 +20,7 @@
   width: 32rem;
   top: -2rem;
   left: -6rem;
-  background-color: #F0F5F4;
+  background-color: #FFF;
   border-radius: 50%;
   z-index: -1;
 
@@ -31,7 +31,7 @@
     width: 35rem;
   }
 
-  @media screen and (min-width: 1240px) {
+  @media screen and (min-width: 1440px) {
     top: -3rem;
     left: -6rem;
     height: 45rem;
@@ -56,7 +56,7 @@
     }
   }
 
-  @media screen and (min-width: 1240px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 2rem;
 
     img {

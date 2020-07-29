@@ -1,10 +1,14 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import classes from './Icon.module.scss';
 
 const Icon = (props) => {
-  return <FontAwesomeIcon icon={props.icon} className={classes.Icon} />
+  return (
+    <div className={classes.Icon}>
+      <span className={props.icon} />
+    </div>
+  )
 }
 
 export default Icon

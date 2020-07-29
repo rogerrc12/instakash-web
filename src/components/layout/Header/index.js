@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Logo from '../../UI/Logo';
 import Navigation from '../../Navigation';
 import Mobile from "../../Navigation/Mobile";
+import WhatsappLink from "../../UI/Whatsapp/Link";
 
 import classes from './Header.module.scss';
 import Hamburger from "../../Navigation/Hamburger";
@@ -28,6 +29,7 @@ const Header = ({ siteTitle, location }) => {
             <Logo siteTitle={siteTitle} />
           </Link>
           <Navigation />
+          <WhatsappLink className={classes.MobileOnly} />
           <Hamburger clicked={openMobile} />
           <Mobile show={open} close={closeMobile} />
         </div>

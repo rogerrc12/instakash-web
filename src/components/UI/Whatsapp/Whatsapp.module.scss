@@ -1,0 +1,39 @@
+@import "../../../assets/css/variables.scss";
+
+.WhatsappLink a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: .8rem;
+
+  @media screen and (min-width: 767px) and (max-width: 1023px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 1rem;
+  }
+}
+
+.Whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $second-green;
+  padding: .5rem 1.2rem;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px rgba(0, 173, 151, .3);
+  cursor: pointer;
+  transform: translateY(160%);
+  transition: 750ms ease-in-out;
+
+  a {
+    font-size: 2.3rem;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.Show {
+  transform: translateY(0);
+}

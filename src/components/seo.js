@@ -105,4 +105,10 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
+const dates = {
+  semana: "9:00 a 16:00",
+  sabados: "9:00 a 12:00",
+  domingos: "cerrados"  
+}
+
 export default SEO

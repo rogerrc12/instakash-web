@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import classes from './Review.module.scss';
 
@@ -15,11 +15,11 @@ const Review = (props) => {
         </p>
       </div>
       <div className={classes.Stars}>
-        <FontAwesomeIcon icon={['fas', 'star']} />
-        <FontAwesomeIcon icon={['fas', 'star']} />
-        <FontAwesomeIcon icon={['fas', 'star']} />
-        <FontAwesomeIcon icon={['fas', 'star']} />
-        <FontAwesomeIcon icon={['fas', 'star']} />
+        <span className="fas fa-star" />
+        <span className="fas fa-star" />
+        <span className="fas fa-star" />
+        <span className="fas fa-star" />
+        <span className="fas fa-star" />
       </div>
       <p>{props.children}</p>
     </div>

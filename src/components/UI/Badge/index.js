@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import classes from './Badge.module.scss';
 
@@ -15,11 +15,16 @@ const Badge = (props) => {
   return (
     <Fade delay={props.animation}>
       <div className={classList.join(' ')}>
-        <FontAwesomeIcon icon={props.icon} />
+        <span className={props.icon + ' ' + classes.Icon} />
         <p>
           <small>{props.small}</small>
           <br />
-          <span className={props.number ? classes.Number : ''}>{props.content}</span>
+          <span className={props.number ? classes.Number : ''}>{
+            props.afp ?
+            <span>Superintendencia de Banca, Seguros y AFP <br /> Res N° 05939-2019</span>
+            :
+            props.content
+          }</span>
         </p>
       </div>
     </Fade>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrapper from './Wrapper';
-import Calculator from '../../../UI/Calculator';
+import Calculator from '../../../Calculator';
 
 import classes from './Exchange.module.scss';
 

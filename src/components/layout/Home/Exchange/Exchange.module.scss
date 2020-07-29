@@ -2,7 +2,7 @@
 
 .Exchange {
   background-color: transparent;
-  padding-top: 4rem;
+  padding-top: 3rem;
   height: 100%;
   background-image: url('../../../../assets/images/bg/right-top-gradient.svg'), 
                     url('../../../../assets/images/bg/lower-gradient.svg'), 
@@ -30,11 +30,12 @@
 
   @media screen and (min-width: 1023px) {
     flex-flow: row;
-    height: 82vh;
+    height: 90vh;
   }
 
-  @media screen and (min-width: 1240px) {
+  @media screen and (min-width: 1440px) {
     padding-top: 4rem;
     align-items: flex-start;
+    height: 75vh;
   }
 }

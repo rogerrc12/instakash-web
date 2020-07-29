@@ -6,7 +6,7 @@ import classes from './Bank.module.scss';
 const Bank = (props) => {
   return (
     <Fade delay={300}>
-      <div className={classes.Bank}>
+      <div className={classes.Bank + ' ' + props.className}>
         <img src={props.img} alt={props.altText} />
       </div>
     </Fade>

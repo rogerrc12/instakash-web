@@ -35,13 +35,24 @@
   }
 }
 
+.CompanyInfo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
 .Copy {
-  margin-top: 3rem;
-  text-align: center;
+  margin-top: 2rem;
   font-size: .9rem;
   line-height: 1.5;
 
   a {
     color: $main-yellow;
   }
+}
+
+.Company {
+  text-align: right;
 }

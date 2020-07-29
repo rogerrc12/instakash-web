@@ -1,16 +1,54 @@
+@import "../../../assets/css/variables.scss";
+
 .Newsletter {
-  width: 38%;
+  width: 100%;
+  font-size: .8rem;
 
   p {
     text-align: left;
     line-height: 1.5;
 
-    @media screen and (max-width: 768px) {
-      font-size: .8rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1rem;
     }
   }
 
-  @media screen and (max-width: 1140px) {
-    width: 80%;
+  @media screen and (min-width: 1140px) {
+    width: 25%;
+  }
+}
+
+.NewsletterForm {
+  margin-top: .5rem;
+  color: #000;
+
+  input, button {
+    padding: .75rem;
+    border-radius: 7px;
+    border-color: transparent;
+  }
+
+  input {
+    width: 58%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  button {
+    padding: .75rem 1.4rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: $main-yellow;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 250ms ease-out;
+    outline: 0;
+    box-shadow: none;
+
+    &:hover, &:focus, &active {
+      background-color: transparent;
+      border-color: $main-yellow;
+      color: $main-yellow;
+    }
   }
 }

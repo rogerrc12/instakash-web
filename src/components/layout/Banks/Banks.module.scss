@@ -12,7 +12,7 @@
 
   h2 {
     font-weight: 400;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   @media screen and (max-width: 767px) {
@@ -32,4 +32,8 @@
   @media screen and (max-width: 767px) {
     flex-flow: column;
   }
+}
+
+.Interbank img {
+  max-width: 15rem;
 }

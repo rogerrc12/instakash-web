@@ -2,19 +2,15 @@ import React from 'react';
 import { useFetch } from '../../../hooks';
 
 const Schedule = () => {
-  const { response: schedule }  = useFetch(`https://app.instakash.net/home/getSchedule`, 
-    { headers: { 'Content-Type':'application/json' } }, 'post');
 
-  let scheduleTime;
-  if (!schedule) {
-    scheduleTime = 'Lunes a Viernes: 9AM a 6PM y Sábados: 8AM a 2PM'
-  } else {
-    scheduleTime = schedule;
-  }
+  const response = useFetch('https://app.instakash.net/home/getSchedule', null, 'post');
+  console.log(response)
+
+  let scheduleTime = <span>Lunes a Viernes <br /> <b>9AM a 6PM</b> <br /> Sábados <br /> <b>8AM a 2PM</b></span>
 
   return (
     <div>
-      <h4>Horario de Atención</h4>
+      <h4>Nuestro Horario</h4>
       <p>{scheduleTime}</p>
     </div>
   );

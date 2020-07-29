@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import classes from './Swipe.module.scss';
 
@@ -24,7 +24,7 @@ const Swipe = (props) => {
 
   return (
     <div className={classList.join(' ')} onClick={props.clicked} onKeyDown={props.clicked} role="button" tabIndex={0}>
-      <FontAwesomeIcon icon={['fas', 'exchange-alt']} />
+      <span className="fas fa-exchange-alt" />
     </div>
   )
 }
