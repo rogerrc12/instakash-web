@@ -4,6 +4,7 @@
   text-align: center;
   order: 2;
   z-index: 1;
+  width: 100%;
 
   @media screen and (min-width: 767px) {
     margin-top: 2rem;
@@ -11,21 +12,21 @@
 
   @media screen and (min-width: 1024px) {
     order: 1;
+    width: 50%;
   }
 }
 
 .Background {
   position: absolute;
-  height: 32rem;
-  width: 32rem;
+  height: 30rem;
+  width: 30rem;
   top: -2rem;
-  left: -6rem;
-  background-color: #FFF;
+  left: -4rem;
+  background-color: #fff;
   border-radius: 50%;
   z-index: -1;
 
   @media screen and (min-width: 767px) {
-    top: 0;
     left: -3.8rem;
     height: 35rem;
     width: 35rem;
@@ -42,7 +43,6 @@
 .Slider {
   margin-bottom: 1rem;
   z-index: 1;
-  
 
   img {
     max-width: 35rem;
@@ -65,15 +65,36 @@
   }
 }
 
-.Badges {
-  display: flex;
+.Slide {
+  display: flex !important;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
-  flex-flow: column; 
+  position: relative;
+  top: 1rem;
 
-  @media screen and (min-width: 767px) {
-    margin-top: 2rem;
-    flex-flow: row;
-    justify-content: space-around;
+  img {
+    max-width: 15rem;
+    display: inline-block;
+    margin-bottom: 1rem;
   }
+
+  @media screen and (min-width: 1024px) {
+    right: 7rem;
+    top: 1rem;
+
+    img {
+      max-width: 19rem;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    img {
+      max-width: 23rem;
+    }
+  }
+}
+
+.InfoBadge {
+  border-radius: 0 !important;
 }

@@ -4,7 +4,7 @@
   color: #fff;
   font-weight: 700;
   text-decoration: none;
-  font-size: .8rem;
+  font-size: 0.8rem;
 
   @media screen and (min-width: 767px) and (max-width: 1023px) {
     display: none;
@@ -20,12 +20,13 @@
   bottom: 20px;
   right: 20px;
   background-color: $second-green;
-  padding: .5rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 50%;
-  box-shadow: 3px 3px 10px rgba(0, 173, 151, .3);
+  box-shadow: 3px 3px 10px rgba(0, 173, 151, 0.3);
   cursor: pointer;
   transform: translateY(160%);
   transition: 750ms ease-in-out;
+  z-index: 999;
 
   a {
     font-size: 2.3rem;

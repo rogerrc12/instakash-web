@@ -2,11 +2,11 @@
 
 .Exchange {
   background-color: transparent;
-  padding-top: 3rem;
+  padding: 3rem 0 5rem;
   height: 100%;
-  background-image: url('../../../../assets/images/bg/right-top-gradient.svg'), 
-                    url('../../../../assets/images/bg/lower-gradient.svg'), 
-                    url('../../../../assets/images/bg/lower-color.svg');
+  background-image: url("../../../../assets/images/bg/right-top-gradient.svg"),
+    url("../../../../assets/images/bg/lower-gradient.svg"),
+    url("../../../../assets/images/bg/lower-color.svg");
   background-size: cover;
   background-position: 0 calc(100% - 9rem), 0 calc(100% - 2rem), 0 100%;
   background-repeat: no-repeat, no-repeat;

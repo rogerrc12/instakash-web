@@ -1,38 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Fade from 'react-reveal/Fade';
-import '@fortawesome/fontawesome-free/css/all.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "@fortawesome/fontawesome-free/css/all.css";
 
-import classes from './Badge.module.scss';
+import classes from "./Badge.module.scss";
 
 const Badge = (props) => {
   const classList = [classes.Badge];
 
   if (props.transparent) {
-    classList.push(classes.Transparent)
+    classList.push(classes.Transparent);
   }
 
   return (
-    <Fade delay={props.animation}>
-      <div className={classList.join(' ')}>
-        <span className={props.icon + ' ' + classes.Icon} />
-        <p>
-          <small>{props.small}</small>
-          <br />
-          <span className={props.number ? classes.Number : ''}>{
-            props.afp ?
-            <span>Superintendencia de Banca, Seguros y AFP <br /> Res N° 05939-2019</span>
-            :
-            props.content
-          }</span>
-        </p>
-      </div>
-    </Fade>
-  )
-}
+    <div className={`${classList.join(" ")} ${props.className}`}>
+      <span className={props.icon + " " + classes.Icon} />
+      {props.children}
+    </div>
+  );
+};
 
 Badge.propTypes = {
-  icon: PropTypes.array,
-}
+  icon: PropTypes.string,
+};
 
-export default Badge
+export default Badge;

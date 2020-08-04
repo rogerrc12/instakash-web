@@ -4,6 +4,7 @@
   width: 100%;
   max-width: 35rem;
   order: 1;
+  margin: 3rem 0;
 
   h1 {
     color: #fff;
@@ -51,35 +52,37 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 
   .Action {
     margin-left: auto;
     background-color: $main-yellow;
     color: $main-green;
     text-decoration: none;
-    box-shadow: 0 20px 40px rgba(47, 112, 90, .15);
+    box-shadow: 0 20px 40px rgba(47, 112, 90, 0.15);
     cursor: pointer;
     transition: 250ms ease-out;
     font-size: 1rem;
     font-weight: 700;
     color: darken($main-green, 10);
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       color: $main-yellow;
       background-color: transparent;
-      border-color: $main-yellow
+      border-color: $main-yellow;
     }
 
     &:disabled {
-      opacity: .5;
+      opacity: 0.5;
       cursor: not-allowed;
     }
   }
 
   @media screen and (min-width: 1440px) {
     .Info p {
-      font-size: .95rem;
+      font-size: 0.95rem;
     }
   }
 }
@@ -87,8 +90,8 @@
 .ErrorMessage {
   color: $main-yellow;
   display: block;
-  padding: .5rem .5rem 0;
-  font-size: .9rem;
+  padding: 0.5rem 0.5rem 0;
+  font-size: 0.9rem;
   text-align: left;
   font-weight: 600;
 }
