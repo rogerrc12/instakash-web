@@ -2,8 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import Zoom from "react-reveal/Zoom";
 
-import Badge from "../../../../UI/Badge";
-
 import ahorro from "../../../../../assets/images/slider/ahorro.png";
 import cajaFuerte from "../../../../../assets/images/slider/caja-fuerte.png";
 import tiempo from "../../../../../assets/images/slider/tiempo.png";
@@ -27,7 +25,7 @@ const slides = [
     content: (
       <p>
         Registrados en la Superintendencia de Banca, Seguros y AFP <br />
-        <span>Res N° 05939-2019</span>
+        <span style={{ fontSize: "1.05rem" }}>Res N° 05939-2019</span>
       </p>
     ),
   },
@@ -63,9 +61,10 @@ const ExchangeSlider = () => {
         {slides.map((slide) => (
           <div key={slide.id} className={classes.Slide}>
             <img src={slide.image} alt="" />
-            <Badge icon={slide.icon} className={classes.InfoBadge}>
+            <div className={classes.Info}>
+              <span className={`${classes.InfoIcon} ${slide.icon}`} />
               {slide.content}
-            </Badge>
+            </div>
           </div>
         ))}
       </Slider>
