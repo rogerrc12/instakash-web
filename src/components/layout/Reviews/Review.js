@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '@fortawesome/fontawesome-free/css/all.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "@fortawesome/fontawesome-free/css/all.css";
 
-import classes from './Review.module.scss';
+import classes from "./Review.module.scss";
 
 const Review = (props) => {
   return (
     <div className={classes.Review}>
       <div className={classes.User}>
-        <img src={props.image} alt={props.name} />
+        <img src={"data:image/png;base64," + props.image} alt={props.name} />
         <p>
           <span className={classes.Name}>{props.name}</span>
           {props.profession}
@@ -23,12 +23,12 @@ const Review = (props) => {
       </div>
       <p>{props.children}</p>
     </div>
-  )
-}
+  );
+};
 
 Review.propTypes = {
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
-}
+  image: PropTypes.string.isRequired,
+};
 
-export default Review
+export default Review;
