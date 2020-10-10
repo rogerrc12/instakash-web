@@ -1,10 +1,9 @@
-import React from "react";
-import { useFetch } from "../../hooks";
-import { Tooltip } from "antd";
-import "antd/dist/antd.css";
-import "@fortawesome/fontawesome-free/css/all.css";
+import React from "react"
+import { Tooltip } from "antd"
+import "antd/dist/antd.css"
+import "@fortawesome/fontawesome-free/css/all.css"
 
-import classes from "./Limits.module.scss";
+import classes from "./Limits.module.scss"
 
 const info = (
   <small>
@@ -14,7 +13,7 @@ const info = (
       monto deseado.
     </b>
   </small>
-);
+)
 
 const Limits = () => {
   return (
@@ -26,7 +25,7 @@ const Limits = () => {
         Monto mayor a <br />$ 5,000 o S./ 15,000
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default Limits;
+export default Limits

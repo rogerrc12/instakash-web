@@ -1,11 +1,11 @@
-import React from "react";
-import Slider from "react-slick";
-import Zoom from "react-reveal/Zoom";
+import React from "react"
+import Slider from "react-slick"
+import Zoom from "react-reveal/Zoom"
 
-import ahorro from "../../../../../assets/images/slider/ahorro.png";
-import cajaFuerte from "../../../../../assets/images/slider/caja-fuerte.png";
-import tiempo from "../../../../../assets/images/slider/tiempo.png";
-import classes from "./Wrapper.module.scss";
+import ahorro from "../../../../../assets/images/slider/ahorro.png"
+import cajaFuerte from "../../../../../assets/images/slider/caja-fuerte.png"
+import tiempo from "../../../../../assets/images/slider/tiempo.png"
+import classes from "./Wrapper.module.scss"
 
 const slides = [
   {
@@ -14,7 +14,7 @@ const slides = [
     icon: "fas fa-dollar-sign",
     content: (
       <p>
-        Transacciones exitosas realizadas <br /> <span>+2MIL</span>
+        Cantidad de soles cambiados <br /> <span>+2MILLONES</span>
       </p>
     ),
   },
@@ -40,7 +40,7 @@ const slides = [
       </p>
     ),
   },
-];
+]
 
 const ExchangeSlider = () => {
   const settings = {
@@ -53,12 +53,12 @@ const ExchangeSlider = () => {
     autoplaySpeed: 5000,
     fade: true,
     speed: 2500,
-  };
+  }
 
   return (
     <div className={classes.Wrapper}>
       <Slider {...settings}>
-        {slides.map((slide) => (
+        {slides.map(slide => (
           <div key={slide.id} className={classes.Slide}>
             <img src={slide.image} alt="" />
             <div className={classes.Info}>
@@ -72,7 +72,7 @@ const ExchangeSlider = () => {
         <div className={classes.Background}></div>
       </Zoom>
     </div>
-  );
-};
+  )
+}
 
-export default ExchangeSlider;
+export default ExchangeSlider

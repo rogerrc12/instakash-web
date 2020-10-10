@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
@@ -42,8 +42,8 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          name: 'keywords',
-          constent: site.siteMetadata.keywords
+          name: "keywords",
+          constent: site.siteMetadata.keywords,
         },
         {
           property: `og:title`,
@@ -103,12 +103,6 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-}
-
-const dates = {
-  semana: "9:00 a 16:00",
-  sabados: "9:00 a 12:00",
-  domingos: "cerrados"  
 }
 
 export default SEO

@@ -1,35 +1,42 @@
-import React from 'react';
-import Icon from '../../UI/Icon';
-import Schedule from '../../UI/Schedule';
+import React from "react"
+import Icon from "../../UI/Icon"
+import Schedule from "../../UI/Schedule"
 
-import classes from './Information.module.scss';
+import classes from "./Information.module.scss"
 
 const Information = () => {
   return (
     <div className={classes.InfoContact}>
-      <h1 className="contact-title">Gracias por tu interés en <br /> <span>Instakash</span></h1>
-      <p>Estamos siempre innovando, buscando las mejores opciones financieras para ti. Siguenos de cerca y mantente al dia con nuestros temas de educación financiera y nuestros servicios. Para cualquier duda o consulta contáctanos. </p>
+      <h1 className="contact-title">
+        Gracias por tu interés en <br /> <span>Instakash</span>
+      </h1>
+      <p>
+        Estamos siempre innovando, buscando las mejores opciones financieras
+        para ti. Siguenos de cerca y mantente al dia con nuestros temas de
+        educación financiera y nuestros servicios. Para cualquier duda o
+        consulta contáctanos.{" "}
+      </p>
       <div className={classes.ContentWrapper}>
-
         <div className={classes.Information}>
           <Icon icon="fas fa-map-marker-alt" />
           <div className={classes.Content}>
             <h4>Dirección</h4>
-            <p>Avenida del Ejército,749, miraflores, Lima INSTAKASH S.A.C. RUC:20605285105</p>
+            <p>
+              Avenida del Ejército,749, miraflores, Lima INSTAKASH S.A.C.
+              RUC:20605285105
+            </p>
           </div>
         </div>
 
         <div className={classes.Information}>
           <Icon icon="far fa-clock" />
-          <div className={classes.Content + ' ' + classes.Horario}>
+          <div className={classes.Content + " " + classes.Horario}>
             <Schedule />
           </div>
         </div>
-
       </div>
 
       <div className={classes.ContentWrapper}>
-
         <div className={classes.Information}>
           <Icon icon="far fa-envelope" />
           <div className={classes.Content}>
@@ -45,16 +52,20 @@ const Information = () => {
             <a href="tel:+51929324006">+51 929 324 006</a>
           </div>
         </div>
-
       </div>
 
       <div className={classes.ContentWrapper}>
-
         <div className={classes.Information}>
           <Icon icon="fab fa-instagram" />
           <div className={classes.Content}>
             <h4>Instagram</h4>
-            <a href="https://instagram.com/instakashnet" rel="noreferrer" target="_blank">@instakashnet</a>
+            <a
+              href="https://instagram.com/instakashnet"
+              rel="noreferrer"
+              target="_blank"
+            >
+              @instakashnet
+            </a>
           </div>
         </div>
 
@@ -62,10 +73,29 @@ const Information = () => {
           <Icon icon="fab fa-facebook-f" />
           <div className={classes.Content}>
             <h4>Facebook</h4>
-            <a href="https://www.facebook.com/Instakash-103956227716506" rel="noreferrer" target="_blank">@instakash</a>
+            <a
+              href="https://www.facebook.com/Instakash-103956227716506"
+              rel="noreferrer"
+              target="_blank"
+            >
+              @instakash
+            </a>
           </div>
         </div>
 
+        <div className={classes.Information}>
+          <Icon icon="fab fa-linkedin" />
+          <div className={classes.Content}>
+            <h4>LinkedIn</h4>
+            <a
+              href="https://www.facebook.com/Instakash-103956227716506"
+              rel="noreferrer"
+              target="_blank"
+            >
+              @instakash
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   )

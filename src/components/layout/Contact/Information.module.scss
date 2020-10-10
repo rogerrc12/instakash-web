@@ -5,7 +5,7 @@
   text-align: center;
 
   @media screen and (min-width: 991px) {
-    width: 50%; 
+    width: 50%;
     text-align: left;
     padding-right: 3rem;
   }
@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   flex-flow: column;
-  
+
   &:first-of-type {
     margin-top: 2.5rem;
   }
@@ -32,7 +32,7 @@
   margin: 1rem 0;
 
   p {
-    font-size: .85rem !important;
+    font-size: 0.85rem !important;
     line-height: 1.5;
   }
 
@@ -54,23 +54,23 @@
 }
 
 .Content {
-  padding: .4rem;
+  padding: 0.4rem;
 
   h4 {
-    margin-bottom: .2rem;
-    margin-top: .5rem;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
     color: $light-green;
   }
 
   p {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   a {
     color: #707070;
     text-decoration: none;
     display: inline-block;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   @media screen and (min-width: 991px) {
