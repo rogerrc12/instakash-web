@@ -13,7 +13,7 @@
     "@fortawesome/react-fontawesome": "^0.1.10",
     "@loadingio/loading.css": "^2.0.0",
     "antd": "^4.3.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "cleave.js": "^1.6.0",
     "emailjs-com": "^2.6.3",
     "formik": "^2.1.4",
